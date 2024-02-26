@@ -51,10 +51,10 @@ public class LetterGrade {
 
                 //if user enetered at least one grade...
                 if (gradeCounter != 0) {
-                    //calculate average of all grades enetered
+                    //calculate average of all grades entered
                     double average = (double) total / gradeCounter;
                     //output summary of results
-                    System.out.printf("Total of the %d grades enetered is %d%n",
+                    System.out.printf("Total of the %d grades entered is %d%n",
                             gradeCounter, total);
                     System.out.printf("Class average is %.2f%n", average);
                     System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d%n%s%d%n",
