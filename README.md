@@ -20,7 +20,7 @@ public class LetterGrade {
                 "On UNIX/Linux/macOS type <Ctrl> d then press Enter",
                 "On Windows type <Ctrl> z then press Enter");
 
-        //loop until user eneters the end-of-file indicator
+        //loop until user enters the end-of-file indicator
         while (input.hasNext()){
             int grade = input.nextInt();//read grade
             total += grade;//add grade to total
@@ -43,30 +43,30 @@ public class LetterGrade {
                     break; //exits switch
                 default://grade was less than 60
                     ++fCount;
-                    break; //optinal; exits switch anyway
-                        
+                    break; //optional; exits switch anyway
             }
         }
-            
         //display grade report
-        System.out.printf("%nGrade report: %n);
-                
+        System.out.printf("%nGrade report: %n");
+
                 //if user enetered at least one grade...
-                if (gradeCounter != 0){
+                if (gradeCounter != 0) {
                     //calculate average of all grades enetered
                     double average = (double) total / gradeCounter;
                     //output summary of results
-        System.out.printf("Total of the %d grades enetered is %d%n",
-                gradeCounter, total);
-        System.out.printf("Class average is %.2f%n", average);
-        System.out.printf("%n%s%n%"
-        )
-        }
-                
-                
-                
-
-
-
+                    System.out.printf("Total of the %d grades enetered is %d%n",
+                            gradeCounter, total);
+                    System.out.printf("Class average is %.2f%n", average);
+                    System.out.printf("%n%s%n%s%d%n%s%d%n%s%d%n%s%d%n%s%d%n",
+                            "Number of students who received each grade:",
+                            "A: ", aCount, //display number of A grades
+                            "B: ", bCount, //display number of B grades
+                            "C: ", cCount, //display number of C grades
+                            "D ", dCount, //display number of D grades
+                            "F: ", fCount //display number of F grades
+                    );
+                }else { //no grades were entered, so output appropriate message
+                    System.out.println("No grades were entered");
+                }//END: else
     }//main
 }//LetterGrade
